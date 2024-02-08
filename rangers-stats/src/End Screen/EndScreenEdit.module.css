@@ -1,0 +1,35 @@
+.container {
+    flex: 0 0 auto;
+    background-color: rgb(184, 184, 184);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%
+  }
+
+.team{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+}
+
+.container1{
+    top: 10px;
+    flex: 0 0 auto;
+    left: 0px;
+    width: 622px;
+    background-color: rgb(81, 81, 81);
+    height: 100px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}

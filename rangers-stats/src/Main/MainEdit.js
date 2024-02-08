@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 
-const Edit = () => {
+const MainEdit = () => {
     return (
         <div>
             
@@ -9,4 +9,4 @@ const Edit = () => {
 
 };
 
-export default Edit;
+export default MainEdit;
