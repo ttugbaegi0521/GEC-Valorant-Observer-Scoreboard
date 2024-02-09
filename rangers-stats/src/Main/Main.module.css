@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 *{
-  font-family: 'Inter', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   overflow: hidden;
+}
 
+body{
+  background-color: green;
 }
 
 .leftBox{
-  width: 45%;
+  width: 30%;
   height: 8%;
   float: left;
   padding: 10px;
@@ -15,19 +19,17 @@
   background-color: rgb(27, 27, 27);
   position: absolute;
   margin: 0;
-  top: 0;
-  left: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  top: 15px;
+  left: 15%;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
 
-
 .rightBox{
-  width: 45%;
+  width: 30%;
   height: 8%;
   float: right;
   padding: 10px;
@@ -35,18 +37,28 @@
   background-color:rgb(212, 212, 212);
   position: absolute;
   margin: 0;
-  top: 0;
-  right: 0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  top: 15px;
+  right: 15%;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.leftItem{
+  left: 20%;
+  position: relative;
+}
+
+.rightItem{
+  right: 20%;
+  position: relative;
+
+}
+
 
 .teamName1{
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 900;
   color: rgb(212, 212, 212);
   text-align: center;
@@ -56,7 +68,7 @@
 
 
 .teamName2{
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 900;
   color: rgb(27, 27, 27);
   text-align: center;
@@ -67,13 +79,13 @@
 
 .logo1{
   margin-left: 20px;
-  width: 80px;
+  width: 65px;
   border-radius: 5px;
 }
 
 .logo2{
   margin-right: 20px;
-  width: 80px;
+  width: 65px;
   border-radius: 5px;
 }
 
@@ -88,8 +100,42 @@
   background-color: rgb(255, 174, 174);
   margin: 0;
   bottom: 0;
+  text-align: center;
 }
 
-.editContainer input{
+
+/* .logoContainer{
+  width: 100vw;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(255, 174, 174);
+  margin: 0;
+  bottom: 0;
+} */
+
+.editContainer img{
+  width: 40px
+}
+
+.editTeam{
+  margin: 20px;
+}
+
+.editTeam h1{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(27, 27, 27);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.editTeam h3{
   margin: 10px;
+  float: left;
 }
