@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 *{
   font-family: 'Noto Sans', sans-serif;
   overflow: hidden;
@@ -17,6 +16,7 @@ body{
   padding: 10px;
   box-sizing: border-box;
   background-color: rgb(27, 27, 27);
+  color: rgb(212, 212, 212);
   position: absolute;
   margin: 0;
   top: 15px;
@@ -28,6 +28,11 @@ body{
 
 }
 
+/* .score{
+  margin: 30px;
+  margin-bottom: 50px;
+} */
+
 .rightBox{
   width: 30%;
   height: 8%;
@@ -35,6 +40,7 @@ body{
   padding: 10px;
   box-sizing: border-box;
   background-color:rgb(212, 212, 212);
+  color: rgb(27, 27, 27);
   position: absolute;
   margin: 0;
   top: 15px;
@@ -104,17 +110,6 @@ body{
 }
 
 
-/* .logoContainer{
-  width: 100vw;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background-color: rgb(255, 174, 174);
-  margin: 0;
-  bottom: 0;
-} */
 
 .editContainer img{
   width: 40px
@@ -138,4 +133,31 @@ body{
 .editTeam h3{
   margin: 10px;
   float: left;
+}
+
+.setScoreBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  bottom: 0;
+ 
+}
+
+.scoreBox{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+.setScoreItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

@@ -4,12 +4,14 @@ import style from './Main.module.css';
 const Main = () => {
     const [team1, setTeam1] = useState({
         name: 'Team 1',
-        logo: 'https://via.placeholder.com/80'
+        logo: 'https://via.placeholder.com/80',
+        setScore: 2
     });
 
     const [team2, setTeam2] = useState({
         name: 'Team 2',
-        logo: 'https://via.placeholder.com/80'
+        logo: 'https://via.placeholder.com/80',
+        setScore: 1
     });
 
     const [gameScore, setGameScore] = useState([0, 0]);
@@ -21,17 +23,72 @@ const Main = () => {
         "GSS": "https://lh3.googleusercontent.com/d/1rynAMEWkPKtPJ3BFo3XyWBNTnsvM3D70=s80"
     }
 
+    //team1 as rgb(212, 212, 212) and team2 as rgb(27, 27, 27)
+ 
 
+    const setScoreIcon = [
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="rgb(212, 212, 212)" d="m12 19l-7-7l7-7l7 7z"/></svg>, 
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="rgb(212, 212, 212)" d="m12 19l-7-7l7-7l7 7zm0-2.85L16.15 12L12 7.85L7.85 12zM12 12"/></svg>,
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="rgb(27, 27, 27)" d="m12 19l-7-7l7-7l7 7z"/></svg>, 
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="rgb(27, 27, 27)" d="m12 19l-7-7l7-7l7 7zm0-2.85L16.15 12L12 7.85L7.85 12zM12 12"/></svg>,
+
+    ]
+
+    const setScore1 = () => {
+        let setScoreList = [];
+        for (let i = 0; i < team1.setScore; i++) {
+            setScoreList.push(setScoreIcon[0]);
+        }
+        for (let i = 0; i < 3 - team1.setScore; i++) {
+            console.log(i);
+            setScoreList.push(setScoreIcon[1]);
+        }
+        return (
+            <div className={style.setScoreBox}>
+                {setScoreList.map((icon, index) => {
+                    return (
+                        <div key={index} className={style.setScoreItem}>{icon}</div>
+                    )
+                })}
+            </div>
+        );
+    }
+
+    const setScore2 = () => {
+        let setScoreList = [];
+        for (let i = 0; i < team2.setScore; i++) {
+            setScoreList.push(setScoreIcon[2]);
+        }
+        for (let i = 0; i < 3 - team2.setScore; i++) {
+            setScoreList.push(setScoreIcon[3]);
+        }
+        return (
+            <div className={style.setScoreBox}>
+                {setScoreList.map((icon, index) => {
+                    return (
+                        <div key={index} className={style.setScoreItem}>{icon}</div>
+                    )
+                })}
+            </div>
+        );
+    }
+    
     return (
         <div>
             <div className={style.leftBox}>
                 <h1 className={style.teamName1 + " " + style.leftItem}>{team1.name}</h1>
                 <img src={team1.logo} alt="team logo" className={style.logo1 + " " + style.leftItem} />
-                <h1 className={style.leftItem}>{gameScore[0]}</h1>
+                <div className={style.scoreBox}>
+                    <h1 className={style.leftItem + " " + style.score}>{gameScore[0]}</h1>
+                    {setScore1()}
+                </div>
             </div>
 
             <div className={style.rightBox}>
-                <h1 className={style.rightItem}>{gameScore[1]}</h1>
+                <div className={style.scoreBox}>
+                    {setScore2()}
+                    <h1 className={style.rightItem + " " + style.score}>{gameScore[1]}</h1>
+                </div>
                 <img src={team2.logo} alt="team logo" className={style.logo2 + " " + style.rightItem} />
                 <h1 className={style.teamName2 + " " + style.rightItem}>{team2.name}</h1>
             </div>
