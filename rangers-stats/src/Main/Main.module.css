@@ -1,11 +1,95 @@
-#trapezoid {
-    width: 100px;
-    height: 140px;
-    background-color: red;
-    transform: perspective(20vw) rotateY(45deg);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+
+}
+
+.leftBox{
+  width: 45%;
+  height: 8%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgb(27, 27, 27);
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 
-.trapezoidRotate{
-    transform: rotate(-90deg);
+.rightBox{
+  width: 45%;
+  height: 8%;
+  float: right;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color:rgb(212, 212, 212);
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.teamName1{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(212, 212, 212);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.teamName2{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgb(27, 27, 27);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.logo1{
+  margin-left: 20px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.logo2{
+  margin-right: 20px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+
+.editContainer{
+  width: 100vw;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(255, 174, 174);
+  margin: 0;
+  bottom: 0;
+}
+
+.editContainer input{
+  margin: 10px;
 }
