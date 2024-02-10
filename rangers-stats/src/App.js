@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './Main/Main';
-import MainEdit from './Main/MainEdit';
 import './App.css';
+import MapBan from './MapBan/MapBan';
 
 function App() {
   return (
@@ -10,8 +10,8 @@ function App() {
       <BrowserRouter basename={'/'}>
         <Routes>
           <Route path='/' element={<Main />} />
-          <Route path='/mainedit' element={<MainEdit />} />
           <Route path='/main' element={<Main />} />
+          <Route path='/mapban' element={<MapBan />} />
           <Route path='*' element={<Main />} />
         </Routes>
       </BrowserRouter>

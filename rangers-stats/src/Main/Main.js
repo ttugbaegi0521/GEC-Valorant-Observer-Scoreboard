@@ -81,7 +81,7 @@ const Main = () => {
          r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
         return images
        }
-    const images = importAll(require.context('../img', false, /\.(png|jpe?g|webp)$/));
+    const images = importAll(require.context('../Agent', false, /\.(png|jpe?g|webp)$/));
     
       return (
         <div className={style.container}>
